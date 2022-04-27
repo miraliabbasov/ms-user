@@ -1,0 +1,23 @@
+server:
+  port: 8081
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/users
+    username: postgres
+    password: 1234
+
+  jpa:
+    hibernate:
+      ddl-auto: none
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQL10Dialect
+    show-sql: true
+
+  liquibase:
+    change-log: classpath:db.changelog/master.yaml
+
+
+client:
+  payment:
+    url: http://localhost:8083/v1/payment

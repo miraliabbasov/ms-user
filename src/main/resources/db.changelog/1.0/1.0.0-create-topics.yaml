@@ -1,0 +1,35 @@
+databaseChangeLog:
+  - changeSet:
+      id: Create Users table
+      author: MIRALI ABBASOV
+      changes:
+        - createTable:
+            tableName: users
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: name
+                  type: varchar(250)
+              - column:
+                  name: surname
+                  type: varchar(250)
+              - column:
+                  name: email
+                  type: varchar(250)
+              - column:
+                  name: balance
+                  type: numeric(16,2)
+              - column:
+                  name: api_key
+                  type: varchar(250)
+
+
+
+
+
